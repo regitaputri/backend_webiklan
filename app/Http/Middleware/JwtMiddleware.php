@@ -3,7 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use JwtAuth;
+use JWTAuth;
 use Exception;
 use Tymon\JWTAuth\Http\Middleware\BaseMiddleware;
 

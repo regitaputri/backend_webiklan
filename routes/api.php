@@ -17,6 +17,12 @@ Route::post('register', 'UserController@register');
 Route::post('login', 'UserController@login');
 
 Route::middleware(['jwt.verify'])->group(function(){
+    Route::get('/iklan', 'IklanController@index');
+    Route::get('/iklan/{id}', 'IklanController@show');
+    Route::post('iklan', 'IklanController@store');
+    Route::put('/iklan/{id}', 'IklanController@update');
+    Route::delete('/iklan/{id}', 'IklanController@destroy');
+
     Route::get('iklan', 'IklanController@iklan');
     Route::get('iklanall', 'IklanController@iklanAuth');
     Route::get('user', 'UserController@getAuthenticatedUser');
